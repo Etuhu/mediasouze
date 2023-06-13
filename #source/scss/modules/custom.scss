@@ -75,11 +75,15 @@ body {
 }
 
 .container {
-    @media (min-width: 1200px) and (max-width: 1920px) {
-        max-width: 80%;
-    }
-    @media (min-width: 1921px) {
-        max-width: 1860px;
+    max-width: 100%;
+    // @media (min-width: 1200px) and (max-width: 1920px) {
+    //     max-width: 80%;
+    // }
+    // @media (min-width: 1921px) {
+    //     max-width: 1860px;
+    // }
+    @media (min-width: 2561px) {
+        max-width: 2560px;
     }
 }
 
@@ -194,4 +198,75 @@ a {
             background-color: #737373;
         }
     }
+}
+
+
+.top-scroll-button {
+	color: white;
+	background-color: #9C0055;
+	width: 80px;
+	height: 80px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5rem;
+	border-radius: 50%;
+	border: unset;
+	position: fixed;
+	z-index: 1000;
+	bottom: 50px;
+	right: 50px;
+	transition: 0.2s ease;
+	opacity: 0;
+	@media (max-width: 1920px) {
+		width: 70px;
+		height: 70px;
+	}
+	@media (max-width: 1699px) {
+		width: 60px;
+		height: 60px;
+	}
+	@media (max-width: 1499px) {
+		width: 55px;
+		height: 55px;
+	}
+	@media (max-width: 1299px) {
+		width: 50px;
+		height: 50px;
+	}
+	@media (max-width: 1199px) {
+		right: 25px;
+	}
+	@media (max-width: 767px) {
+		width: 45px;
+		height: 45px;
+		font-size: 1.3rem;
+	}
+	@media (max-width: 575px) {
+		bottom: 45px;
+		right: 8px;
+		width: 40px;
+		height: 40px;
+	}
+	@media (max-width: 399px) {
+		width: 35px;
+		height: 35px;
+	}
+	&.show {
+		visibility: visible;
+		opacity: 0.5;
+		&:hover {
+			@media (min-width: 992px) {
+				opacity: 1;
+				transition: 0.2s ease;
+			}
+		}
+	}
+	> svg,
+	> img {
+		width: 30%;
+		height: 30%;
+		min-width: 11px;
+		min-height: 11px;
+	}
 }

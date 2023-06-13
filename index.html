@@ -14,6 +14,7 @@
 		<link rel="stylesheet" href="css/fancybox.css" />
 		<link href="css/style.css" media="screen" rel="stylesheet" type="text/css" />
 		<link href="css/style.css.map" media="screen" rel="stylesheet" type="text/css" />
+		<script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
 	</head>
 	<body>
 		<div class="fader"></div>
@@ -30,16 +31,16 @@
 						<nav class="navbar navbar-site" role="navigation">
 							<ul class="navbar-nav">
 								<li class="menu-item active">
-									<a href="#about">/О компании</a>
+									<a href="#about">О компании</a>
 								</li>
 								<li class="menu-item">
-									<a href="#map">Выбрать размещение</a>
+									<a href="#map-section">Выбрать размещение</a>
 								</li>
 								<li class="menu-item">
 									<a href="#clients">Клиенты</a>
 								</li>
 								<li class="menu-item">
-									<a href="#blog">Ьлог</a>
+									<a href="#blog">Блог</a>
 								</li>
 								<li class="menu-item">
 									<a href="#contacts">Контакты</a>
@@ -64,6 +65,17 @@
 					<div class="row">
 						<div class="col-lg-6 about-description">
 							<div class="about-description-content-block">
+								<h2 class="basic-title">
+									Оператор наружной рекламы<br>
+									<span>с 2005 года</span>
+								</h2>
+								<p>
+									«МЕДИАСОЮЗ» ‒ оператор наружной рекламы в г. Кемерово с 2005 года. Наша адресная программа насчитывает более 100 рекламных конструкций. Подобран профессиональный штат сотрудников со 100% знанием своего дела. Мы ориентированы на долгосрочные взаимовыгодные партнёрские отношения с заказчиками, поэтому производим полный цикл работы по размещению вашей рекламы:
+								</p>
+								<ul>
+									<li>разработка дизайна, изготовление, монтаж и демонтаж на билбордах и призматронах;</li>
+									<li>разработка видеоролика и дизайн-макеты для размещения на цифровых экранах Кемерово!</li>
+								</ul>
 								<h3>Основные виды носителей, на которых <span>размещаем:</span></h3>
 								<div class="nav flex-column nav-pills-about about-list" id="v-pills-about-tab" role="tablist" aria-orientation="vertical">
 									<div class="nav-link active about-list-item" id="v-pills-about-1-tab" data-bs-toggle="pill" data-bs-target="#v-pills-about-1" role="tab" aria-controls="v-pills-about-1" aria-selected="true">
@@ -114,10 +126,302 @@
 					</div>
 				</div>
 			</section>
+			<section class="map" id="map-section">
+				<div class="container">
+					<h2 class="basic-title">
+						<span>Заявить о себе</span> всему городу:
+					</h2>
+					<div class="map-wrapper d-flex" style="position: relative;">
+						<div class="col-xxl-3 col-lg-4 locations" style="position: absolute; top: 0; left: 0;">
+							<div class="content">
+								<button type="button" class="location-button">
+									Центральный р-н
+								</button>
+								<button type="button" class="location-button">
+									Ленинский р-н
+								</button>
+								<button type="button" class="location-button">
+									Заводский р-н
+								</button>
+								<button type="button" class="location-button">
+									Рудничный р-н
+								</button>
+								<button type="button" class="location-button">
+									Кировский р-н
+								</button>
+							</div>
+						</div>
+						<div class="col-xxl-3 col-lg-4 offer-list-wrapper">
+							<div class="offer-list" id="accordionOffer">
+								<div class="accordion-item">
+								  <h2 class="accordion-header" id="headingOne">
+									<div class="accordion-button" data-bs-toggle="collapse" data-bs-target="#accordion_offer_1" aria-expanded="true" aria-controls="accordion_offer_1">
+										Digital-экран 6х3м | Кемерово, Октябрьский пр-т. 22/1
+									</div>
+								  </h2>
+								  <div id="accordion_offer_1" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionOffer">
+									<div class="offer-content">
+										<table class="offer-content-table">
+											<tbody>
+												<tr>
+													<td class="offer-key">Адрес:</td>
+													<td class="offer-value">Октябрьский проспект, 22/1, Кемерово</td>
+												</tr>
+												<tr>
+													<td class="offer-key">Свободные даты:</td>
+													<td class="offer-value">01.05.2023 - 31.05.2023</td>
+												</tr>
+												<tr>
+													<td class="offer-key">Стоимость размещения:</td>
+													<td class="offer-value">по запросу</td>
+												</tr>
+											</tbody>
+										</table>
+										<div class="offer-content-footer">
+											<a href="#" class="offer-doc-link">
+												<span>Технические требования к размещению</span>
+												<svg width="21" height="24" viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M11.628 14.724L18.324 8.028L20.34 10.08L10.188 20.268L-3.47729e-05 10.08L2.01596 8.028L8.74797 14.76L8.74797 -5.06702e-07L11.628 -3.80814e-07L11.628 14.724Z" fill="#9C0055"/>
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M0.339966 20.5L20.34 20.5L20.34 23.5L0.339966 23.5L0.339966 20.5Z" fill="#9C0055"/>
+												</svg>
+											</a>
+											<a href="#" class="order-button">Бронировать место</a>
+										</div>
+										<div class="offer-content-gallery">
+											<div class="offer-content-gallery-swiper swiper">
+												<div class="swiper-wrapper offer-content-gallery-list">
+													<div class="swiper-slide offer-content-gallery-item offer-content-gallery-item--video">
+														<a href="video.mp4" data-fancybox="offer-item-gallery-1">
+															<img src="img/p-1.jpg" width="600" class="img-fluid" />
+														</a>
+														<button type="button" class="play-button">
+															<img src="img/play.svg" width="24">
+														</button>
+													</div>
+													<div class="swiper-slide offer-content-gallery-item">
+														<a href="img/p-2.jpg" data-fancybox="offer-item-gallery-1">
+															<img src="img/p-2.jpg" width="600" class="img-fluid" />
+														</a>
+													</div>
+													<div class="swiper-slide offer-content-gallery-item">
+														<a href="img/p-2.jpg" data-fancybox="offer-item-gallery-1">
+															<img src="img/p-2.jpg" width="600" class="img-fluid" />
+														</a>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-scrollbar clients-widget-swiper-scrollbar"></div>
+										</div>
+									</div>
+								  </div>
+								</div>
+								<div class="accordion-item">
+								  <h2 class="accordion-header" id="headingTwo">
+									<div class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordion_offer_2" aria-expanded="false" aria-controls="accordion_offer_2">
+										Тривижн | Новокузнецк, Курако пр-т. 108
+									</div>
+								  </h2>
+								  <div id="accordion_offer_2" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionOffer">
+									<div class="accordion-body">
+									  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+									</div>
+								  </div>
+								</div>
+								<div class="accordion-item">
+								  <h2 class="accordion-header" id="headingThree">
+									<div class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordion_offer_3" aria-expanded="false" aria-controls="accordion_offer_3">
+									  Билборд, 6х3м | а/д Кемерово - Белово, 35-ый км.
+									</div>
+								  </h2>
+								  <div id="accordion_offer_3" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionOffer">
+									<div class="accordion-body">
+									  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+									</div>
+								  </div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xxl-9 col-lg-8 map-wrapper">
+							<div id="map" class="map-wrapper" style="width:1920px; height:1300px; max-width: 100%;"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="index-bottom-block">
+				<div class="container">
+					<div class="index-bottom-content">
+						<div class="col-xl-8 col-md-7 clients-widget-wrapper">
+							<h3>Клиенты</h3>
+							<div class="clients-widget">
+								<h4>
+									Спасибо<br>
+									за доверие!
+								</h4>
+								<div class="clients-widget-swiper swiper">
+									<div class="swiper-wrapper clients-list">
+										<article class="swiper-slide clients-item">
+											<a href="#" class="clients-item-link">
+												<img src="img/c-1.png" width="184" class="img-fluid" />
+											</a>
+										</article>
+										<article class="swiper-slide clients-item">
+											<a href="#" class="clients-item-link">
+												<img src="img/c-2.png" width="184" class="img-fluid" />
+											</a>
+										</article>
+										<article class="swiper-slide clients-item">
+											<a href="#" class="clients-item-link">
+												<img src="img/c-3.png" width="184" class="img-fluid" />
+											</a>
+										</article>
+										<article class="swiper-slide clients-item">
+											<a href="#" class="clients-item-link">
+												<img src="img/c-4.png" width="184" class="img-fluid" />
+											</a>
+										</article>
+										<article class="swiper-slide clients-item">
+											<a href="#" class="clients-item-link">
+												<img src="img/c-1.png" width="184" class="img-fluid" />
+											</a>
+										</article>
+										<article class="swiper-slide clients-item">
+											<a href="#" class="clients-item-link">
+												<img src="img/c-2.png" width="184" class="img-fluid" />
+											</a>
+										</article>
+									</div>
+								</div>
+								<div class="swiper-pagination clients-widget-swiper-pagination"></div>
+								<div class="swiper-button swiper-button-prev clients-widget-swiper-button-prev">
+									<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M5.9176 11.648L12.6136 18.344L10.5616 20.36L0.373604 10.208L10.5616 0.0200462L12.6136 2.03605L5.88161 8.76805L20.6416 8.76805V11.648L5.9176 11.648Z" fill="white" />
+									</svg>
+								</div>
+								<div class="swiper-button swiper-button-next clients-widget-swiper-button-next">
+									<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M15.0976 8.73202L8.4016 2.03602L10.4536 0.0200195L20.6416 10.172L10.4536 20.36L8.4016 18.344L15.1336 11.612L0.373596 11.612L0.373596 8.73202L15.0976 8.73202Z" fill="white" />
+									</svg>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-4 col-md-5 blog-widget-wrapper blog-widget-wrapper--compact">
+							<h4>
+								Наш блог
+							</h4>
+							<div class="blog-widget-list">
+								<div class="blog-widget-item">
+									<div class="pic">
+										<a href="blog-item.html">
+											<img src="img/n-1.jpg" width="181">
+										</a>
+									</div>
+									<div class="content">
+										<a href="blog-item.html" class="stretched-link"></a>
+										<div class="date">
+											05.06.2023
+										</div>
+										<h5 class="title">
+											Призматрон или тривижн
+										</h5>
+										<div class="preview">
+											Это рекламный щит со съемными панелями.
+										</div>
+										<div class="link">
+											Читать далее
+										</div>
+									</div>
+								</div>
+								<div class="blog-widget-item">
+									<div class="pic">
+										<a href="blog-item.html">
+											<img src="img/n-2.jpg" width="181">
+										</a>
+									</div>
+									<div class="content">
+										<a href="blog-item.html" class="stretched-link"></a>
+										<div class="date">
+											13.05.2023
+										</div>
+										<h5 class="title">
+											Билборд (рекламный щит)
+										</h5>
+										<div class="preview">
+											Самый традиционный и популярный способ размещения наружной рекламы.
+										</div>
+										<div class="link">
+											Читать далее
+										</div>
+									</div>
+								</div>
+								<div class="blog-widget-item">
+									<div class="pic">
+										<a href="blog-item.html">
+											<img src="img/n-3.jpg" width="181">
+										</a>
+									</div>
+									<div class="content">
+										<a href="blog-item.html" class="stretched-link"></a>
+										<div class="date">
+											10.04.2023
+										</div>
+										<h5 class="title">
+											Digital-экран (led экраны)
+										</h5>
+										<div class="preview">
+											Представляет собой уличный монитор больших размеров (6х3 м, 3х6 м)
+										</div>
+										<div class="link">
+											Читать далее
+										</div>
+									</div>
+								</div>
+							</div>
+							<a href="blog.html" class="feed-link">Ко всем новостям</a>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
 		<div class="footer-wrapper">
-			<div class="footer"></div>
+			<div class="footer">
+				<div class="footer-top-row">
+					<div class="container">
+						<a href="tel:+73842390505" class="phone-link">+7&nbsp;(3842)&nbsp;390&nbsp;505</a>
+						<div class="social">
+							<a href="#" class="social-item" target="_blank">
+								<img src="img/vk.svg" width="52">
+							</a>
+							<a href="#" class="social-item" target="_blank">
+								<img src="img/whatsapp.svg" width="52">
+							</a>
+							<a href="#" class="social-item" target="_blank">
+								<img src="img/viber.svg" width="52">
+							</a>
+							<a href="#" class="social-item" target="_blank">
+								<img src="img/mail.svg" width="52">
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="footer-bottom-row">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6 col-sm-8 col-10 footer-bottom-left">2005 - 2023. ООО «МЕДИАСОЮЗ». Все права защищены. <a href="#">Политика конфеденциальности</a> и <a href="#">соглашение на обработку персональных данных</a>.</div>
+							<div class="col-md-6 col-sm-4 col-2 footer-bottom-right">
+								<a href="https://mediatip.ru" target="_blank" class="dev">
+									<img src="img/copyright_color.png" width="40" />
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
+		<button type="button" class="top-scroll-button" id="top-button">
+			<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M8.732 5.9024L2.036 12.5984L0.0199965 10.5464L10.172 0.358404L20.36 10.5464L18.344 12.5984L11.612 5.8664L11.612 20.6264L8.732 20.6264L8.732 5.9024Z" fill="white" />
+			</svg>
+		</button>
 		<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
 		<script type="text/javascript" src="js/jquery.mCustomScrollbar.min.js"></script>
 		<script type="text/javascript" src="js/wow.min.js"></script>
