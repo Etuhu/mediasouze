@@ -111,6 +111,30 @@ const resizeHandlerSlider = () => {
 }
 window.addEventListener('resize', resizeHandlerSlider);
 
+//Слайдер Виды носителей на главной
+const aboutSwiper = new Swiper(".about-swiper", {
+	slidesPerView: 1,
+	slidesPerGroup: 1,
+	speed: 500,
+	simulateTouch: true,
+	spaceBetween: 0,
+	watchOverflow: true,
+	effect: 'fade',
+	pagination: {
+		el: ".about-swiper-pagination",
+		clickable: "true",
+	},
+});
+
+let aboutListItems = document.querySelectorAll(".index-about-list > li");
+
+
+aboutListItems.forEach(function(aboutListItem, index){
+	aboutListItem.addEventListener("mouseover", function () {
+		aboutSwiper.slideTo(index);
+	});
+});
+
 //Карта 2GIS на главной
 let map = document.getElementById("map");
 

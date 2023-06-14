@@ -1,0 +1,105 @@
+.map {
+    padding-top: 2rem;
+    .map-wrapper {
+        position: relative;
+        .locations {
+            position: absolute;
+            top: 0;
+            left: 0;
+            > .content {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 15px;
+                > .location-button {
+                    opacity: 0.6;
+                    border: 1px solid $main-font-color;
+                    border-radius: 30px;
+                    height: 36px;
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 10px 20px;
+                    font-weight: 500;
+                    font-size: 0.75rem;
+                    line-height: 1;
+                    color: $main-font-color;
+                    &.active {
+                        background-color: $main-font-color;
+                        color: white;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .offer-list-wrapper {
+            padding-top: 150px;
+        }
+    }
+    .leaflet-tile-pane {
+        filter: grayscale(1);
+    }
+    .offer-list-wrapper {
+        .offer-list {
+            padding-right: 30px;
+            .accordion-item {
+                .accordion-header {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    position: relative;
+                    .offer-type-icon {
+                        width: 30px;
+                        height: 30px;
+                        background-color: $pink;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right: 15px;
+                    }
+                    .accordion-button {
+                        font-weight: 500;
+                        font-size: 1rem;
+                        line-height: 1;
+                    }
+                }
+                .accordion-collapse {
+                    .offer-content {
+                        padding-top: 2rem;
+                    }
+                    .offer-content-table {
+                        td {
+                            vertical-align: top;
+                            padding: 10px 5px;
+                            font-size: 0.75rem;
+                        }
+                        .offer-key {
+                            font-weight: 600;
+                        }
+                        .offer-value {
+                            padding-left: 50px;
+                        }
+                    }
+                }
+                .offer-content-footer {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .offer-doc-link {
+                        display: flex;
+                        padding-right: 30px;
+                        font-weight: 300;
+                        font-size: 0.75rem;
+                        line-height: 1.2;
+                        color: #9C0055;
+                        &:hover {
+                            color: $pink;
+                        }
+                        > span {
+                            padding-right: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

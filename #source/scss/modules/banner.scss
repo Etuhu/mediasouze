@@ -1,0 +1,17 @@
+.banner-wrapper {
+    position: relative;
+    .pic {
+        overflow: hidden;
+        img, video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 30px;
+        }
+    }
+    .order-button {
+        position: absolute;
+        bottom: 50px;
+        right: 200px;
+    }
+}

@@ -1,0 +1,68 @@
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    .header-title-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1 {
+            font-weight: 500;
+            font-size: 4.5rem;
+            line-height: 1;
+            margin: 0;
+            text-transform: uppercase;
+        }
+    }
+    .menu-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        .navbar-nav {
+            align-items: flex-end;
+            .menu-item {
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: row-reverse;
+                width: 100%;
+                > a {
+                    flex-shrink: 0;
+                    position: relative;
+                    display: inline-block;
+                    width: fit-content;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    font-weight: 500;
+                    font-size: 1rem;
+                    line-height: 1.4;
+                    color: black;
+                    text-transform: uppercase;
+                    font-family: "Unbounded", sans-serif;
+                    transition: 0.2s ease;
+                    text-align: right;
+                    &:hover {
+                        color: $pink;
+                        transition: 0.2s ease;
+                        + div {
+                            > svg {
+                                width: 100%;
+                                transition: 0.5s ease;
+                            }
+                        }
+                    }
+                }
+                > div {
+                    flex-shrink: 1;
+                    padding-right: 25px;
+                    width: 610px;
+                    > svg {
+                        height: 46px;
+                        width: 0;
+                        transition: 0.5s ease;
+                    }
+                }
+            }
+        }
+    }
+}

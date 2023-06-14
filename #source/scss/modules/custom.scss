@@ -5,18 +5,18 @@ body {
 }
 
 html {
-    font-size: 14px;
+    font-size: 16px;
     @media (min-width: 768px) {
-        font-size: 14px;
-    }
-    @media (min-width: 1500px) {
         font-size: 16px;
     }
+    @media (min-width: 1500px) {
+        font-size: 18px;
+    }
     @media (min-width: 1700px) {
-        font-size: 17px;
+        font-size: 20px;
     }
     @media (min-width: 1921px) {
-        font-size: 18px;
+        font-size: 24px;
     }
 }
 
@@ -25,11 +25,11 @@ body {
     flex-direction: column;
     color: black;
     counter-reset: steps;
-    font-weight: normal;
+    font-weight: 300;
     font-size: 1rem;
-    line-height: 1.4;
-    font-family: "Nunito", sans-serif;
-    background-color: #F5F4F6;
+    line-height: 1.5;
+    font-family: "SF Pro Display", sans-serif;
+    background-color: #F9F8FB;
     .footer-wrapper {
         margin-top: auto;
     }
@@ -85,6 +85,10 @@ body {
     @media (min-width: 2561px) {
         max-width: 2560px;
     }
+    @media (min-width: 1200px) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
 }
 
 .navbar-brand {
@@ -99,7 +103,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Nunito", sans-serif;
+    font-family: "Unbounded", sans-serif;
 }
 
 .row {
@@ -131,11 +135,15 @@ a {
 }
 
 .basic-title {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 2rem;
-    line-height: 1.36;
+    line-height: 1.1;
+    margin-bottom: 2rem;
     @media (max-width: 575px) {
         font-size: 1.7rem;
+    }
+    span {
+        color: $pink;
     }
 }
 
