@@ -97,12 +97,15 @@ let offerSliderParams = {
 
 //Инициализируем слайдер галереи на главной странице
 let offerSlider = new Swiper(".offer-content-gallery-swiper", offerSliderParams);
+let documentWidth = document.body.clientWidth + 17;
+if (documentWidth > 991) {
+	offerSlider.destroy();
+}
 
 //Активация/деактивация слайдера с галереей на определенной ширине экрана
 const resizeHandlerSlider = () => {
     if (offerSlider) {
-        let documentWidth = document.body.clientWidth + 17;
-        if (documentWidth < 992) {
+        if (documentWidth > 991) {
             offerSlider.destroy();
         } else {
             new Swiper(".offer-content-gallery-swiper", offerSliderParams);
