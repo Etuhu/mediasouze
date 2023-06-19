@@ -1,5 +1,10 @@
 .banner-wrapper {
     position: relative;
+    > .container {
+        @media (max-width: 575px) {
+            padding-left: 0;
+        }
+    }
     .pic {
         overflow: hidden;
         img, video {
@@ -7,11 +12,50 @@
             height: 100%;
             object-fit: cover;
             border-radius: 30px;
+            @media (max-width: 991px) {
+                height: 300px;
+            }
+            @media (max-width: 575px) {
+                height: 250px;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
         }
     }
     .order-button {
         position: absolute;
         bottom: 50px;
         right: 200px;
+        @media (max-width: 2099px) {
+            right: 150px;
+        }
+        @media (max-width: 1699px) {
+            right: 130px;
+        }
+        @media (max-width: 1599px) {
+            right: 110px;
+        }
+        @media (max-width: 1399px) {
+            right: 100px;
+            bottom: 40px;
+        }
+        @media (max-width: 1199px) {
+            right: 70px;
+            bottom: 30px;
+        }
+        @media (max-width: 767px) {
+            right: 50px;
+            bottom: 20px;
+        }
+        @media (max-width: 575px) {
+            right: 0;
+            bottom: 0;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            &:hover {
+                transform: translate(-50%, -50%);
+            }
+        }
     }
 }

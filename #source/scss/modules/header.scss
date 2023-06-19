@@ -3,29 +3,102 @@
     align-items: center;
     padding-top: 40px;
     padding-bottom: 40px;
+    @media (max-width: 2299px) {
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+    @media (max-width: 1920px) {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .logo-wrapper {
+        @media (max-width: 575px) {
+            text-align: center;
+            padding-top: 35px;
+            padding-bottom: 55px;
+        }
+        img {
+            @media (max-width: 1199px) {
+                width: 220px;
+            }
+            @media (max-width: 991px) {
+                width: 200px;
+            }
+        }
+    }
     .header-title-wrapper {
         display: flex;
         justify-content: center;
         align-items: center;
+        @media (min-width: 768px) and (max-width: 991px) {
+            justify-content: flex-start;
+        }
+        @media (max-width: 575px) {
+            justify-content: flex-start;
+        }
         h1 {
             font-weight: 500;
             font-size: 4.5rem;
             line-height: 1;
             margin: 0;
             text-transform: uppercase;
+            @media (max-width: 2299px) {
+                font-size: 4rem;
+            }
+            @media (max-width: 2099px) {
+                font-size: 3.5rem;
+            }
+            @media (max-width: 1399px) {
+                font-size: 3.2rem;
+            }
+            @media (max-width: 1199px) {
+                font-size: 2.8rem;
+            }
+            @media (max-width: 991px) {
+                font-size: 2.5rem;
+            }
+            @media (max-width: 767px) {
+                font-size: 2.3rem;
+            }
+            @media (max-width: 575px) {
+                font-size: 2.5rem;
+            }
         }
     }
     .menu-wrapper {
         display: flex;
         justify-content: flex-end;
         align-items: flex-start;
+        @media (min-width: 768px) and (max-width: 991px) {
+            padding-top: 1rem;
+        }
+        @media (max-width: 767px) {
+            justify-content: flex-start;
+            padding-top: 1.5rem;
+        }
+        .navbar {
+            @media (min-width: 768px) and (max-width: 991px) {
+                width: 100%;
+            }
+        }
         .navbar-nav {
             align-items: flex-end;
+            @media (min-width: 768px) and (max-width: 991px) {
+                width: 100%;
+                flex-direction: row;
+            }
             .menu-item {
                 display: flex;
                 flex-wrap: nowrap;
                 flex-direction: row-reverse;
                 width: 100%;
+                @media (min-width: 768px) and (max-width: 991px) {
+                    flex-direction: row;
+                    justify-content: center;
+                }
+                @media (max-width: 767px) {
+                    flex-direction: row;
+                }
                 > a {
                     flex-shrink: 0;
                     position: relative;
@@ -41,6 +114,16 @@
                     font-family: "Unbounded", sans-serif;
                     transition: 0.2s ease;
                     text-align: right;
+                    @media (max-width: 1199px) {
+                        font-size: 0.9rem;
+                    }
+                    @media (min-width: 768px) and (max-width: 991px) {
+                        text-align: center;
+                        font-size: 0.8rem;
+                    }
+                    @media (max-width: 575px) {
+                        font-size: 1.1rem;
+                    }
                     &:hover {
                         color: $pink;
                         transition: 0.2s ease;
@@ -56,10 +139,36 @@
                     flex-shrink: 1;
                     padding-right: 25px;
                     width: 610px;
+                    @media (max-width: 2299px) {
+                        width: 550px;
+                    }
+                    @media (max-width: 1920px) {
+                        width: 420px;
+                    }
+                    @media (max-width: 1699px) {
+                        width: 360px;
+                        padding-right: 15px;
+                    }
+                    @media (max-width: 1199px) {
+                        display: none;
+                        width: 300px;
+                    }
                     > svg {
                         height: 46px;
                         width: 0;
                         transition: 0.5s ease;
+                        @media (max-width: 2299px) {
+                            height: 40px;
+                        }
+                        @media (max-width: 1920px) {
+                            height: 30px;
+                        }
+                        @media (max-width: 1699px) {
+                            height: 25px;
+                        }
+                        @media (max-width: 1199px) {
+                            height: 20px;
+                        }
                     }
                 }
             }

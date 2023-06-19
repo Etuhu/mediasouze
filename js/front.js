@@ -24,28 +24,32 @@ let clientsSliderParams = {
     },
 	breakpoints: {
 		320: {
-          slidesPerView: 2.2,
-		  spaceBetween: 10
-		},
-		400: {
-          slidesPerView: 2.5,
-		  spaceBetween: 10
+          slidesPerView: 2,
+		  spaceBetween: 15,
 		},
 		500: {
           slidesPerView: 3,
-		  spaceBetween: 10
+		  spaceBetween: 15
 		},
 		768: {
 		  slidesPerView: 3,
-		  spaceBetween: 12
+		  spaceBetween: 20
+		},
+		992: {
+          slidesPerView: 4,
+		  spaceBetween: 25
 		},
 		1200: {
-          slidesPerView: 4,
+		  slidesPerView: 3,
 		  spaceBetween: 20
 		},
 		1600: {
+          slidesPerView: 4,
+		  spaceBetween: 20
+		},
+		1800: {
 		  slidesPerView: 4,
-		  spaceBetween: 30
+		  spaceBetween: 25
 		}
 	}
 }
@@ -112,7 +116,7 @@ const resizeHandlerSlider = () => {
         }
     }
 }
-window.addEventListener('resize', resizeHandlerSlider);
+// window.addEventListener('resize', resizeHandlerSlider);
 
 //Слайдер Виды носителей на главной
 const aboutSwiper = new Swiper(".about-swiper", {
@@ -122,7 +126,8 @@ const aboutSwiper = new Swiper(".about-swiper", {
 	simulateTouch: true,
 	spaceBetween: 0,
 	watchOverflow: true,
-	effect: 'fade',
+	effect: 'slide',
+	touchReleaseOnEdges: true,
 	pagination: {
 		el: ".about-swiper-pagination",
 		clickable: "true",
@@ -173,6 +178,23 @@ function backToTop() {
 
 window.addEventListener("scroll", trackScroll);
 scrollButton.addEventListener("click", backToTop);
+
+//Изменяем верикальный отступ списка адресов в зависимости от высоты блока с фильтрами по районам
+let addressMapBlock = document.querySelector(".map .offer-list-wrapper");
+let locationsFilter = document.querySelector(".map .locations");
+
+console.log(addressMapBlock.style.paddingTop, locationsFilter.offsetHeight);
+
+let addressBlockResizer = function () {
+	addressMapBlock.style.paddingTop = (locationsFilter.offsetHeight + 20) + 'px';
+};
+
+addressBlockResizer();
+window.addEventListener('resize', function () {
+	addressBlockResizer();
+	resizeHandlerSlider();
+});
+
 
 //Подключение библиотеки для маски телефона
 // $(document).ready(function () {

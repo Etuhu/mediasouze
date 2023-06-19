@@ -1,54 +1,50 @@
 .map {
     padding-top: 2rem;
-    .map-wrapper {
-        position: relative;
-        display: flex;
-        flex-wrap: wrap;
-        .locations {
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 10;
-            padding-right: 10px;
-            > .content {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 15px;
-                background-color: #F9F8FB;
-                padding-bottom: 1.5rem;
-                border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-                > .location-button {
-                    opacity: 0.6;
-                    border: 1px solid $main-font-color;
-                    border-radius: 30px;
-                    height: 36px;
-                    display: inline-flex;
-                    justify-content: center;
-                    align-items: center;
-                    padding: 10px 20px;
-                    font-weight: 500;
-                    font-size: 0.75rem;
-                    line-height: 1;
-                    color: $main-font-color;
-                    &.active {
-                        background-color: $main-font-color;
-                        color: white;
-                        opacity: 1;
-                    }
+    .locations {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        padding-right: 10px;
+        > .content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            background-color: #F9F8FB;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+            > .location-button {
+                opacity: 0.6;
+                border: 1px solid $main-font-color;
+                border-radius: 30px;
+                height: 36px;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px 20px;
+                font-weight: 500;
+                font-size: 0.75rem;
+                line-height: 1;
+                color: $main-font-color;
+                &.active {
+                    background-color: $main-font-color;
+                    color: white;
+                    opacity: 1;
                 }
             }
         }
-        .offer-list-wrapper {
-            padding-top: 130px;
-        }
-    }
-    .leaflet-tile-pane {
-        filter: grayscale(1);
     }
     .offer-list-wrapper {
+        padding-top: 130px;
         height: 1300px;
         overflow-y: auto;
         overflow-x: hidden;
+        @media (max-width: 1920px) {
+            height: 1000px;
+        }
+        @media (max-width: 991px) {
+            height: auto;
+        }
         &::-webkit-scrollbar {
             width: 6px;               /* ширина scrollbar */
         }
@@ -62,6 +58,9 @@
         }
         scrollbar-width: thin;          /* "auto" или "thin"  */
         scrollbar-color: #26161F #CBCBCB;
+        @media (min-width: 992px) {
+            padding-right: 0;
+        }
         .offer-list {
             padding-right: 10px;
             .accordion-item {
@@ -183,5 +182,22 @@
                 }
             }
         }
+    }
+    .map-wrapper {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        @media (max-width: 1920px) {
+            height: 1000px !important;
+        }
+        @media (max-width: 991px) {
+            height: 500px !important;
+        }
+        @media (min-width: 992px) {
+            padding-left: 0;
+        }
+    }
+    .leaflet-tile-pane {
+        filter: grayscale(1);
     }
 }

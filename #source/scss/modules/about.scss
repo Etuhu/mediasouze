@@ -1,25 +1,67 @@
 .about {
     padding-top: 4rem;
+    @media (max-width: 1199px) {
+        padding-top: 2rem;
+    }
     .about-list-wrapper {
         margin-top: 2rem;
+        @media (max-width: 575px) {
+            margin-top: 3rem;
+        }
         h3 {
+            position: relative;
             margin-bottom: 1.5rem;
             font-weight: 700;
             font-size: 1rem;
             line-height: 1.1;
+            @media (max-width: 1199px) {
+                margin-bottom: 0;
+                padding-left: 50px;
+                font-size: 1.1rem;
+            }
+            @media (max-width: 575px) {
+                font-size: 1.15rem;
+                padding-left: 60px;
+            }
             span {
                 color: $pink;
+            }
+            &::before {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                width: 40px;
+                height: 40px;
+                background-image: url(../img/eye-round.svg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                content: "";
+                @media (min-width: 992px) {
+                    display: none;
+                }
+                @media (max-width: 575px) {
+                    width: 50px;
+                    height: 50px;
+                }
             }
         }
     }
     .index-about-list {
         padding-left: 0;
         list-style: none;
+        @media (max-width: 1199px) {
+            display: none;
+        }
         li {
             position: relative;
             padding-left: 55px;
             margin-bottom: 10px;
+            border-radius: 30px;
             transition: 0.2s ease;
+            @media (max-width: 1399px) {
+                padding-left: 45px;
+            }
             &::before {
                 position: absolute;
                 top: 15px;
@@ -28,15 +70,24 @@
                 height: 40px;
                 background-image: url(../img/eye-round.svg);
                 background-size: contain;
+                background-repeat: no-repeat;
                 content: "";
+                @media (max-width: 1399px) {
+                    width: 35px;
+                    height: 35px;
+                    top: 10px;
+                    left: 10px;
+                }
             }
             > .content {
                 padding: 15px;
+                @media (max-width: 1399px) {
+                    padding: 10px;
+                }
             }
             &:hover {
                 background: #FBFBFB;
                 box-shadow: 0px 11px 15px rgba(142, 142, 142, 0.3);
-                border-radius: 30px;
                 transition: 0.2s ease;
             }
             p:last-child,
@@ -47,14 +98,43 @@
         }
     }
     .about-swiper {
+        @media (max-width: 1199px) {
+            box-shadow: 0px 11px 15px rgba(142, 142, 142, 0.3);
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+        }
         .swiper-wrapper {
             padding-bottom: 30px;
+            @media (max-width: 1199px) {
+                padding-bottom: 0px;
+                box-shadow: 0px 11px 15px rgba(142, 142, 142, 0.3);
+            }
         }
         .swiper-pagination {
             display: flex;
             margin-right: -15px;
             margin-left: -15px;
             width: calc(100% + 30px);
+            @media (max-width: 1199px) {
+                bottom: 25px;
+                left: 35px;
+                width: calc(100% - 70px);
+                margin-right: 0;
+                margin-left: 0;
+            }
+            @media (max-width: 991px) {
+                left: 15px;
+                width: calc(100% - 30px);
+            }
+            @media (max-width: 767px) {
+                left: 10px;
+                width: calc(100% - 20px);
+                bottom: 20px;
+            }
+            @media (max-width: 575px) {
+                left: 15px;
+                width: calc(100% - 30px);
+            }
             .swiper-pagination-bullet {
                 flex-grow: 1;
                 height: 8px;
@@ -63,6 +143,10 @@
                 margin-left: 15px;
                 background-color: #D9D9D9;
                 opacity: 1;
+                @media (max-width: 575px) {
+                    margin-right: 10px;
+                    margin-left: 10px;
+                }
             }
             .swiper-pagination-bullet-active {
                 background-color: $pink;
@@ -71,10 +155,54 @@
     }
     .about-gallery {
         padding-top: 1.5rem;
+        @media (max-width: 1199px) {
+            padding-top: 2.5rem;
+        }
         .about-item {
             overflow: hidden;
             > img {
                 border-radius: 30px;
+                @media (max-width: 1199px) {
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+    .about-swiper {
+        @media (max-width: 1199px) {
+            border-radius: 30px;
+        }
+        .about-item {
+            @media (max-width: 1199px) {
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                background-color: white;
+            }
+            > .content {
+                background-color: white;
+                @media (min-width: 1200px) {
+                    display: none;
+                }
+                @media (max-width: 1199px) {
+                    flex-grow: 1;
+                    padding: 30px 50px 50px;
+                    border-bottom-left-radius: 30px;
+                    border-bottom-right-radius: 30px;
+                }
+                @media (max-width: 991px) {
+                    padding: 30px 30px 40px;
+                }
+                @media (max-width: 767px) {
+                    padding: 25px 25px 30px;
+                }
+                > b {
+                    @media (max-width: 1199px) {
+                        color: $pink;
+                        font-weight: 700;
+                        font-size: 1.1rem;
+                    }
+                }
             }
         }
     }
