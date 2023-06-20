@@ -1,14 +1,108 @@
 .map {
     padding-top: 2rem;
+    .map-row {
+        display: flex;
+        @media (max-width: 991px) {
+            flex-direction: column-reverse;
+        }
+    }
+    .map-block {
+        position: relative;
+        .type-filters {
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            max-width: 60%;
+            z-index: 1;
+            @media (max-width: 1920px) {
+                top: 30px;
+            }
+            @media (max-width: 991px) {
+                top: 15px;
+                width: 90%;
+                max-width: 90%;
+            }
+            > .content {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+            }
+            .type-button {
+                border: 1px solid black;
+                background-color: black;
+                border-radius: 30px;
+                height: 48px;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px 30px 10px 20px;
+                font-weight: 500;
+                font-size: 0.75rem;
+                line-height: 1;
+                color: white;
+                margin-right: 10px;
+                margin-bottom: 15px;
+                @media (max-width: 1920px) {
+                    height: 43px;
+                }
+                @media (max-width: 1599px) {
+                    height: 40px;
+                }
+                @media (max-width: 1599px) {
+                    height: 35px;
+                }
+                @media (max-width: 575px) {
+                    margin-bottom: 12px;
+                }
+                &:hover {
+                    opacity: 0.8;
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+                &.active {
+                    background-color: $pink;
+                    border-color: $pink;
+                    color: white;
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+                > img {
+                    margin-right: 15px;
+                    @media (max-width: 1920px) {
+                        width: 22px;
+                    }
+                    @media (max-width: 1599px) {
+                        width: 16px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+            .reset-button {
+                margin-left: 10px;
+                margin-bottom: 15px;
+
+            }
+        }
+    }
     .locations {
         position: absolute;
         top: 0;
         left: 0;
         z-index: 10;
         padding-right: 10px;
+        @media (max-width: 991px) {
+            position: relative;
+            order: 1;
+            padding-right: calc(var(--bs-gutter-x) * .5);
+        }
         > .content {
             display: flex;
             flex-wrap: wrap;
+            align-items: center;
             gap: 15px;
             background-color: #F9F8FB;
             padding-bottom: 1.5rem;
@@ -26,6 +120,9 @@
                 font-size: 0.75rem;
                 line-height: 1;
                 color: $main-font-color;
+                &:hover {
+                    opacity: 1;
+                }
                 &.active {
                     background-color: $main-font-color;
                     color: white;
@@ -35,15 +132,19 @@
         }
     }
     .offer-list-wrapper {
-        padding-top: 130px;
+        padding-top: 1rem;
         height: 1300px;
         overflow-y: auto;
         overflow-x: hidden;
         @media (max-width: 1920px) {
             height: 1000px;
         }
+        @media (max-width: 1399px) {
+            height: 800px;
+        }
         @media (max-width: 991px) {
             height: auto;
+            padding-top: 0;
         }
         &::-webkit-scrollbar {
             width: 6px;               /* ширина scrollbar */
@@ -81,6 +182,9 @@
                         align-items: center;
                         justify-content: center;
                         margin-right: 15px;
+                        @media (max-width: 991px) {
+                            margin-right: 10px;
+                        }
                     }
                     .accordion-button {
                         font-weight: 500;
@@ -91,12 +195,20 @@
                 .accordion-collapse {
                     .offer-content {
                         padding-top: 2rem;
+                        @media (max-width: 991px) {
+                            padding-top: 1rem;
+                        }
                     }
                     .offer-content-table {
                         td {
                             vertical-align: top;
                             padding: 10px 5px;
                             font-size: 0.75rem;
+                            line-height: 1.2;
+                            @media (max-width: 991px) {
+                                padding: 7px 5px;
+                                font-size: 1rem;
+                            }
                         }
                         .offer-key {
                             font-weight: 600;
@@ -110,6 +222,12 @@
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
+                    @media (max-width: 991px) {
+                        justify-content: flex-start;
+                    }
+                    @media (max-width: 575px) {
+                        justify-content: space-between;
+                    }
                     .offer-doc-link {
                         display: flex;
                         padding-right: 30px;
@@ -118,6 +236,12 @@
                         line-height: 1.2;
                         color: #9C0055;
                         transition: 0.2s ease;
+                        @media (max-width: 991px) {
+                            font-size: 1rem;
+                        }
+                        @media (max-width: 575px) {
+                            font-size: 0.9rem;
+                        }
                         &:hover {
                             color: $pink;
                             transition: 0.2s ease;
@@ -131,9 +255,15 @@
                         }
                         > span {
                             padding-right: 15px;
+                            @media (max-width: 575px) {
+                                padding-right: 10px;
+                            }
                         }
                         > svg {
                             transition: 0.2s ease;
+                            @media (max-width: 575px) {
+                                width: 14px;
+                            }
                         }
                     }
                 }
@@ -176,6 +306,22 @@
                                 padding-left: 7px;
                                 opacity: 0.64;
                                 transition: 0.2s ease;
+                                @media (max-width: 991px) {
+                                    bottom: unset;
+                                    right: unset;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);
+                                }
+                                @media (max-width: 575px) {
+                                    width: 50px;
+                                    height: 50px;
+                                }
+                                > img {
+                                    @media (max-width: 575px) {
+                                        width: 20px;
+                                    }
+                                }
                             }
                         }
                     }
@@ -190,6 +336,9 @@
         @media (max-width: 1920px) {
             height: 1000px !important;
         }
+        @media (max-width: 1399px) {
+            height: 800px !important;
+        }
         @media (max-width: 991px) {
             height: 500px !important;
         }
@@ -199,5 +348,27 @@
     }
     .leaflet-tile-pane {
         filter: grayscale(1);
+    }
+    .reset-button {
+        display: none;
+        background-color: rgba(255, 255, 255, 0);
+        padding: 0;
+        margin: 0;
+        border: unset;
+        font-size: 0.8rem;
+        transition: 0.2s ease;
+        line-height: 1.2;
+        @media (max-width: 991px) {
+            color: $pink;
+            font-weight: 500;
+        }
+        &.show {
+            display: block;
+        }
+        &:hover {
+            color: $pink;
+            border-bottom: 1px solid $pink;
+            transition: 0.2s ease;
+        }
     }
 }

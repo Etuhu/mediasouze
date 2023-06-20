@@ -4,9 +4,7 @@
 	> .container {
 		display: flex;
 		align-items: center;
-		@media (max-width: 575px) {
-			flex-wrap: wrap;
-		}
+		flex-wrap: wrap;
 		.phone-link {
 			background: $main-font-color;
 			border-radius: 13px;
@@ -22,6 +20,7 @@
 			margin-right: 25px;
 			transition: 0.2s ease;
 			height: 52px;
+			margin-top: 15px;
 			@media (max-width: 1399px) {
 				height: 45px;
 			}
@@ -42,9 +41,9 @@
 			}
 		}
 		.social {
+			margin-top: 15px;
 			@media (max-width: 575px) {
 				width: 100%;
-				margin-top: 15px;
 				display: flex;
 				justify-content: center;
 			}
@@ -80,6 +79,15 @@
 						height: 45px;
 					}
 				}
+			}
+		}
+		.address {
+			margin-left: 25px;
+			margin-top: 15px;
+			@media (max-width: 575px) {
+				margin-left: 0;
+				text-align: center;
+				width: 100%;
 			}
 		}
 	}

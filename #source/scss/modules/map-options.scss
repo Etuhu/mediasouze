@@ -1,0 +1,22 @@
+.map-icon {
+    position: relative;
+    > svg {
+        > path {
+            fill: black;
+        }
+    }
+    &.active {
+        > svg {
+            > path {
+                fill: $pink;
+            }
+        }
+    }
+    .icon-type {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 12px;
+        z-index: 200;
+    }
+}

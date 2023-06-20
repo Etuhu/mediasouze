@@ -89,7 +89,7 @@
 					<div class="pic">
 						<img src="img/banner.jpg" width="2500" class="img-fluid">
 					</div>
-					<a href="#map" class="order-button">Бронировать место</a>
+					<a href="#map-section" class="order-button">Бронировать место</a>
 				</div>
 			</section>
 			<section class="about" id="about">
@@ -180,7 +180,7 @@
 					<h2 class="basic-title">
 						<span>Заявить о себе</span> всему городу:
 					</h2>
-					<div class="row d-flex">
+					<div class="row map-row">
 						<div class="col-xxl-3 col-lg-4 locations">
 							<div class="content">
 								<button type="button" class="location-button active" data-location="centralniy">
@@ -198,6 +198,9 @@
 								<button type="button" class="location-button" data-location="kirovskiy">
 									Кировский р-н
 								</button>
+								<button type="button" class="reset-button reset-button--locations show" data-location="reset">
+									x&nbsp;Сбросить
+								</button>
 							</div>
 						</div>
 						<div class="col-xxl-3 col-lg-4 offer-list-wrapper">
@@ -211,7 +214,7 @@
 										Digital-экран 6х3м | Кемерово, Октябрьский пр-т. 22/1
 									</div>
 								  </h2>
-								  <div id="accordion_offer_1" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionOffer">
+								  <div id="accordion_offer_1" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionOffer" data-location="leninskiy" data-type="ekran">
 									<div class="offer-content">
 										<table class="offer-content-table">
 											<tbody>
@@ -237,13 +240,13 @@
 													<path fill-rule="evenodd" clip-rule="evenodd" d="M0.339966 20.5L20.34 20.5L20.34 23.5L0.339966 23.5L0.339966 20.5Z" fill="#9C0055"/>
 												</svg>
 											</a>
-											<a href="#" class="order-button order-button--min">Бронировать место</a>
+											<a href="https://wa.me/79235035593?text=Здравствуйте! Меня интересует Digital-экран 6х3м | Кемерово, Октябрьский пр-т. 22/1" class="order-button order-button--min" target="_blank">Бронировать место</a>
 										</div>
 										<div class="offer-content-gallery">
 											<div class="offer-content-gallery-swiper swiper">
 												<div class="swiper-wrapper offer-content-gallery-list">
 													<div class="swiper-slide offer-content-gallery-item offer-content-gallery-item--video">
-														<a href="video.mp4" data-fancybox="offer-item-gallery-1">
+														<a href="img/video.mp4" data-fancybox="offer-item-gallery-1">
 															<img src="img/p-1.jpg" width="600" class="img-fluid" />
 														</a>
 														<button type="button" class="play-button">
@@ -273,10 +276,10 @@
 										<img src="img/triangle.png" width="14">
 									</div>
 									<div class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordion_offer_2" aria-expanded="false" aria-controls="accordion_offer_2">
-										Тривижн | Новокузнецк, Курако пр-т. 108
+										Призматрон | Кемерово, Ленина пр-т. 108
 									</div>
 								  </h2>
-								  <div id="accordion_offer_2" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionOffer">
+								  <div id="accordion_offer_2" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionOffer" data-location="centralniy" data-type="prismatron">
 									<div class="accordion-body">
 									  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
 									</div>
@@ -291,7 +294,7 @@
 									  Билборд, 6х3м | а/д Кемерово - Белово, 35-ый км.
 									</div>
 								  </h2>
-								  <div id="accordion_offer_3" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionOffer">
+								  <div id="accordion_offer_3" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionOffer" data-location="zavodskiy" data-type="bilboard">
 									<div class="accordion-body">
 									  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
 									</div>
@@ -299,7 +302,26 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-xxl-9 col-lg-8">
+						<div class="col-xxl-9 col-lg-8 map-block">
+							<div class="type-filters">
+								<div class="content">
+									<button type="button" class="type-button active" data-type="prismatron">
+										<img src="img/triangle.png" width="25" class="icon-type">
+										<span>Призматрон</span>
+									</button>
+									<button type="button" class="type-button" data-type="bilboard">
+										<img src="img/x.png" width="25" class="icon-type">
+										<span>Билборд</span>
+									</button>
+									<button type="button" class="type-button" data-type="ekran">
+										<img src="img/sqr.png" width="25" class="icon-type">
+										<span>Экран</span>
+									</button>
+									<button type="button" class="reset-button reset-button--type show" data-type="reset">
+										x&nbsp;Сбросить
+									</button>
+								</div>
+							</div>
 							<div id="map" class="map-wrapper" style="width:1920px; height:1300px; max-width: 100%;"></div>
 						</div>
 					</div>
@@ -310,7 +332,7 @@
 					<div class="index-bottom-content row">
 						<div class="col-xl-8 clients-widget-wrapper">
 							<h3>Клиенты</h3>
-							<div class="clients-widget" style="position: relative;">
+							<div class="clients-widget">
 								<h4>
 									Спасибо<br>
 									за доверие!
@@ -445,19 +467,18 @@
 				<div class="footer-top-row">
 					<div class="container">
 						<a href="tel:+73842390505" class="phone-link">+7&nbsp;(3842)&nbsp;390&nbsp;505</a>
+						<a href="tel:+79235035593" class="phone-link">+7&nbsp;923&nbsp;503&nbsp;5593</a>
+						<a href="tel:+79511719069" class="phone-link">+7&nbsp;951&nbsp;171&nbsp;9069</a>
 						<div class="social">
-							<a href="#" class="social-item" target="_blank">
+							<a href="https://vk.com/mediasouz42" class="social-item" target="_blank">
 								<img src="img/vk.svg" width="52">
 							</a>
-							<a href="#" class="social-item" target="_blank">
-								<img src="img/whatsapp.svg" width="52">
-							</a>
-							<a href="#" class="social-item" target="_blank">
-								<img src="img/viber.svg" width="52">
-							</a>
-							<a href="#" class="social-item" target="_blank">
+							<a href="mailto:mediasouzkem@bk.ru" class="social-item" target="_blank">
 								<img src="img/mail.svg" width="52">
 							</a>
+						</div>
+						<div class="address">
+							Кемерово, Стахановская 1-я, 39а | Пн-пт с 08:30-19:00
 						</div>
 					</div>
 				</div>
