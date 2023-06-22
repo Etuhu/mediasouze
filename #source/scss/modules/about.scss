@@ -3,6 +3,36 @@
     @media (max-width: 1199px) {
         padding-top: 2rem;
     }
+    .about-links {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        .about-doc-link {
+            color: #9C0055;
+            font-size: 0.8rem;
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            &:hover {
+                color: $pink;
+                > svg {
+                    path {
+                        fill: $pink;
+                    }
+                }
+            }
+            > svg {
+                width: 15px;
+                height: 20px;
+                margin-left: 5px;
+                @media (max-width: 575px) {
+                    width: 12px;
+                    height: 15px;
+                }
+            }
+        }
+    }
     .about-list-wrapper {
         margin-top: 2rem;
         @media (max-width: 575px) {

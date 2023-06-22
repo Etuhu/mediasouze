@@ -160,48 +160,6 @@ aboutListItems.forEach(function(aboutListItem, index){
 	});
 });
 
-//Карта 2GIS на главной
-let map = document.getElementById("map");
-
-if (map) {
-    DG.then(function () {
-        map = DG.map("map", {
-            center: [55.344563, 86.097347],
-            zoom: 15,
-			zoomControl: false,
-			fullscreenControl: false
-        });
-		mapicon = DG.icon({
-			iconUrl: 'img/pin-pink.svg',
-			iconAnchor: [25, 70],
-			className: 'map-icon',
-			iconSize: [50, 70] /* Размер иконки */
-		});
-		trIcon = DG.divIcon({
-			className: 'map-icon',
-			html: '<svg width="51" height="71" viewBox="0 0 51 71" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M50.8258 26.1453C50.8326 25.9037 50.836 25.6613 50.836 25.418C50.836 11.38 39.456 0 25.418 0C11.38 0 0 11.38 0 25.418C0 25.66 0.00338205 25.9012 0.0101015 26.1416C0.00338965 26.3054 0 26.4699 0 26.6351C0 32.4287 2.39041 38.0636 8.68515 46.635C18.4858 60.0477 20.7169 64.0159 23.5057 71H27.2506C29.8801 64.4127 32.2705 60.2064 42.1508 46.7144C48.844 37.5874 50.836 32.27 50.836 26.6351C50.836 26.4711 50.8326 26.3079 50.8258 26.1453Z" fill="#F20988"/></svg><img src="img/triangle.png" width="25" class="icon-type">',
-			iconSize: [51, 71] /* Размер иконки */,
-			iconAnchor: [25, 71],
-		});
-		sqrIcon = DG.divIcon({
-			className: 'map-icon',
-			html: '<svg width="51" height="71" viewBox="0 0 51 71" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M50.8258 26.1453C50.8326 25.9037 50.836 25.6613 50.836 25.418C50.836 11.38 39.456 0 25.418 0C11.38 0 0 11.38 0 25.418C0 25.66 0.00338205 25.9012 0.0101015 26.1416C0.00338965 26.3054 0 26.4699 0 26.6351C0 32.4287 2.39041 38.0636 8.68515 46.635C18.4858 60.0477 20.7169 64.0159 23.5057 71H27.2506C29.8801 64.4127 32.2705 60.2064 42.1508 46.7144C48.844 37.5874 50.836 32.27 50.836 26.6351C50.836 26.4711 50.8326 26.3079 50.8258 26.1453Z" fill="#F20988"/></svg><img src="img/sqr.png" width="25" class="icon-type">',
-			iconSize: [51, 71] /* Размер иконки */,
-			iconAnchor: [25, 71],
-		});
-		xIcon = DG.divIcon({
-			className: 'map-icon',
-			html: '<svg width="51" height="71" viewBox="0 0 51 71" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M50.8258 26.1453C50.8326 25.9037 50.836 25.6613 50.836 25.418C50.836 11.38 39.456 0 25.418 0C11.38 0 0 11.38 0 25.418C0 25.66 0.00338205 25.9012 0.0101015 26.1416C0.00338965 26.3054 0 26.4699 0 26.6351C0 32.4287 2.39041 38.0636 8.68515 46.635C18.4858 60.0477 20.7169 64.0159 23.5057 71H27.2506C29.8801 64.4127 32.2705 60.2064 42.1508 46.7144C48.844 37.5874 50.836 32.27 50.836 26.6351C50.836 26.4711 50.8326 26.3079 50.8258 26.1453Z" fill="#F20988"/></svg><img src="img/x.png" width="25" class="icon-type">',
-			iconSize: [51, 71] /* Размер иконки */,
-			iconAnchor: [25, 71],
-		});
-		DG.marker([55.359104, 86.133663], {icon: sqrIcon}).addTo(map);
-		DG.marker([55.344563, 86.097347], {icon: trIcon}).addTo(map);
-		DG.marker([55.338751, 86.062210], {icon: xIcon}).addTo(map);
-        // DG.marker([55.344563, 86.097347], {icon: mapicon}).addTo(map);
-    });
-}
-
 //Кнопка прокрутки наверх
 var scrollButton = document.getElementById("top-button");
 function trackScroll() {

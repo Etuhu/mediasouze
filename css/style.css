@@ -504,12 +504,12 @@ a {
 
 .inner-page {
   flex-grow: 1;
-  padding-top: 80px;
-  padding-bottom: 50px;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 @media (max-width: 1920px) {
   .inner-page {
-    padding-top: 50px;
+    padding-top: 1.5rem;
   }
 }
 
@@ -718,6 +718,36 @@ a {
 }
 .feed-link:hover {
   color: rgb(242, 9, 136);
+}
+
+.inner-page-title {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+}
+@media (max-width: 1920px) {
+  .inner-page-title {
+    margin-bottom: 2rem;
+  }
+}
+.inner-page-title > svg {
+  margin-right: 20px;
+  width: 85px;
+}
+@media (max-width: 1920px) {
+  .inner-page-title > svg {
+    margin-right: 15px;
+    width: 65px;
+  }
+}
+@media (max-width: 1199px) {
+  .inner-page-title > svg {
+    width: 55px;
+  }
 }
 
 @keyframes slideme {
@@ -1251,6 +1281,36 @@ a {
     padding-top: 2rem;
   }
 }
+.about .about-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.about .about-links .about-doc-link {
+  color: #9C0055;
+  font-size: 0.8rem;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.about .about-links .about-doc-link:hover {
+  color: rgb(242, 9, 136);
+}
+.about .about-links .about-doc-link:hover > svg path {
+  fill: rgb(242, 9, 136);
+}
+.about .about-links .about-doc-link > svg {
+  width: 15px;
+  height: 20px;
+  margin-left: 5px;
+}
+@media (max-width: 575px) {
+  .about .about-links .about-doc-link > svg {
+    width: 12px;
+    height: 15px;
+  }
+}
 .about .about-list-wrapper {
   margin-top: 2rem;
 }
@@ -1651,6 +1711,7 @@ a {
   opacity: 1;
 }
 .map .offer-list-wrapper {
+  position: relative;
   padding-top: 1rem;
   height: 1300px;
   overflow-y: auto;
@@ -1713,6 +1774,7 @@ a {
   align-items: center;
   justify-content: center;
   margin-right: 15px;
+  flex-shrink: 0;
 }
 @media (max-width: 991px) {
   .map .offer-list-wrapper .offer-list .accordion-item .accordion-header .offer-type-icon {
@@ -1974,8 +2036,8 @@ a {
 }
 @media (min-width: 576px) and (max-width: 1199px) {
   .blog-widget-wrapper--compact .blog-widget-item {
-    width: 32%;
-    max-width: 32%;
+    width: 24%;
+    max-width: 24%;
     margin-right: 1%;
     flex-direction: column;
   }
@@ -2103,15 +2165,15 @@ a {
 .blog-widget-wrapper--full .blog-widget-item {
   display: flex;
   margin-bottom: 15px;
-  width: calc(33.3% - 30px);
-  max-width: calc(33.3% - 30px);
+  width: calc(25% - 30px);
+  max-width: calc(25% - 30px);
   margin-right: 30px;
   flex-direction: column;
 }
 @media (max-width: 991px) {
   .blog-widget-wrapper--full .blog-widget-item {
-    width: calc(33.3% - 20px);
-    max-width: calc(33.3% - 20px);
+    width: calc(50% - 20px);
+    max-width: calc(50% - 20px);
     margin-right: 20px;
   }
 }
@@ -2580,6 +2642,62 @@ a {
   transform: translateX(-50%);
   top: 12px;
   z-index: 200;
+}
+
+.blog-page .blog-content {
+  margin-bottom: 3rem;
+}
+@media (max-width: 991px) {
+  .blog-page .blog-content {
+    flex-direction: column-reverse;
+  }
+}
+.blog-page .blog-content .blog-description .date {
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+.blog-page .blog-content .blog-description .basic-title {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.blog-page .blog-content .blog-image {
+  padding-top: 2rem;
+}
+@media (max-width: 991px) {
+  .blog-page .blog-content .blog-image {
+    padding-top: 0;
+    padding-bottom: 2rem;
+  }
+}
+@media (max-width: 575px) {
+  .blog-page .blog-content .blog-image {
+    padding-bottom: 1.5rem;
+  }
+}
+.blog-page .blog-content .blog-image img {
+  border-radius: 30px;
+}
+@media (max-width: 575px) {
+  .blog-page .blog-content .blog-image img {
+    border-radius: 15px;
+  }
+}
+
+.text-content h3 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.text-content h3 b, .text-content h3 strong {
+  color: rgb(242, 9, 136);
+}
+.text-content a {
+  color: rgb(242, 9, 136);
+  font-weight: 500;
+}
+.text-content a:hover {
+  opacity: 0.7;
 }
 
 .footer-top-row {

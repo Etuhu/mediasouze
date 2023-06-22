@@ -1,0 +1,16 @@
+.text-content {
+    h3 {
+        font-size: 1rem;
+        font-weight: 500;
+        b, strong {
+            color: $pink;
+        }
+    }
+    a {
+        color: $pink;
+        font-weight: 500;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}
